@@ -24,5 +24,5 @@ If you encounter compatibility errors, try installing the following specific ver
 pip install gymnasium==0.29
 pip install shimmy==1.30
 ```
-
-When running any of the files, please ensure that you are running them from the `RL-Assignment` folder.
+### Running Agent Evaluations
+When running any of the evaluation files, please ensure that you run them from the `RL-Assignment` folder.
