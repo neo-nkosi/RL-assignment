@@ -1,3 +1,5 @@
+import numpy as np
+
 
 def evaluate_agent(env, model, n_episodes=100):
     """Evaluate the agent's performance."""

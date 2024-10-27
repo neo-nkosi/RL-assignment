@@ -161,11 +161,11 @@ def main():
     env = NormalizeObservation(env)
     
     # Initialize monitor
-    monitor = GridMonitor(save_dir="training_plots/")
+    monitor = GridMonitor(save_dir="training_plots/iteration_1/")
     
     # Create and train models
     models = {
-        "DQN": DQN("MlpPolicy", env, verbose=1, tensorboard_log="tensorboard_logs/", exploration_fraction=0.3),
+        "DQNIteration_1": DQN("MlpPolicy", env, verbose=1, tensorboard_log="tensorboard_logs/", exploration_fraction=0.3),
     }
     
     models_data = {}

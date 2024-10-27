@@ -164,13 +164,13 @@ def main():
     initial_beta = 0.4
     final_beta = 1.0
     # Initialize monitor
-    monitor = GridMonitor(save_dir="training_plots/")
+    monitor = GridMonitor(save_dir="training_plots/Iteration_2")
     
     required_increase = final_beta - initial_beta
     beta_increment = required_increase / total_timesteps
     
     models = {
-        "DQN": DQNWithPER(
+        "DQNWithPER": DQNWithPER(
             "MlpPolicy", 
             env, 
             verbose=1,
@@ -180,10 +180,10 @@ def main():
             replay_buffer_kwargs={
                 "alpha": 0.6,  # Priority exponent
                 "beta": 0.4,  # Initial importance sampling weight
-                "beta_increment": 0.0000012  # Calculated based on total timesteps
+                "beta_increment": beta_increment  # Calculated based on total timesteps
             }
         ),
-        "DuelingDQN": DuelingDQNWithPER(
+        "DuelingDQNWithPER": DuelingDQNWithPER(
             "MlpPolicy",
             env,
             policy_kwargs={"net_arch": [64, 64]},  # Dueling network architecture
