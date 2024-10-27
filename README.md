@@ -17,6 +17,7 @@ pip install grid2op
 pip install lightsim2grid
 pip install stable_baselines3
 pip install numpy
+pip install tensorboard
 ```
 If you encounter compatibility errors, try installing the following specific versions:
 
