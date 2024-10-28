@@ -127,7 +127,7 @@ class Gym2OpEnv(gym.Env):
     def setup_actions(self):
         self._gym_env.action_space = self._gym_env.action_space.reencode_space("redispatch", ContinuousToDiscreteConverter(nb_bins=11))
         # Customize action space using DiscreteActSpace
-        act_attr_to_keep = ["change_line_status", "change_bus", "redispatch"]  # You can adjust this list
+        act_attr_to_keep = ["change_line_status", "change_bus", "redispatch"]
         self._gym_env.action_space = DiscreteActSpace(
             self._g2op_env.action_space,
              attr_to_keep=act_attr_to_keep
